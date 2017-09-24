@@ -21,11 +21,11 @@ describe('Word') do
     end
   end
 
-  # describe('.all') do
-  #   it('starts out empty') do
-  #     expect(Word.all).to eq([])
-  #   end
-  # end
+  describe('.all') do
+    it('starts out empty') do
+      expect(Word.all).to eq([])
+    end
+  end
 
   # describe('#save') do
   #   it("saves a user-inputted word and definition and adds it to @@list to be displayed") do
