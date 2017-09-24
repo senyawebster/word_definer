@@ -1,10 +1,10 @@
 class Word
   @@list = []
   attr_reader(:id)
-  attr_accessor(:item, :definition)
+  attr_accessor(:name, :definition)
 
-  def initialize(item, definition)
-    @item = item
+  def initialize(name, definition)
+    @name = name
     @definition = [definition]
     @id = @@list.length + 1
   end

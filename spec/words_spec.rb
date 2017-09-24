@@ -7,10 +7,10 @@ describe('Word') do
     Word.clear()
   end
 
-  describe('#item') do
-    it('returns the item (name) of an inputted word') do
+  describe('#name') do
+    it('returns the name of an inputted word') do
       word = Word.new('Frog', 'A small green creature')
-      expect(word.item).to eq('Frog')
+      expect(word.name).to eq('Frog')
     end
   end
 
@@ -28,7 +28,7 @@ describe('Word') do
   end
 
   describe('#save') do
-    it("saves a word's item(name) & definition") do
+    it("saves a word's name(name) & definition") do
       word = Word.new('Toad', 'A small brown creature')
       word.save()
       expect(Word.all).to eq([word])
@@ -45,7 +45,7 @@ describe('Word') do
   end
 
   describe('#add_definition') do
-    it('adds a definition to an item that already has one') do
+    it('adds a definition to an name that already has one') do
       word = Word.new('Fox', 'A medium red creature')
       word.save()
       word.add_definition('A sneaky creature')

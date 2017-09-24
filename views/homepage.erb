@@ -1,0 +1,23 @@
+<br>
+<div class="jumbotron">
+  <h1>Welcome To Your Personal Dictionary!</h1>
+</div>
+
+<div class="card">
+  <h3>Enter a word to add it to your list</h3>
+   <form method="post" action="/">
+    <div class="form-group">
+      <input id="word" name="name" class="form-control" type="text" placeholder="Enter Your New Word Here!">
+    </div>
+    <button type="submit" class="btn">Submit your Word</button>
+  </form>
+  <br>
+</div>
+<br>
+<div class="card">
+  <h3>Your Dictionary</h3>
+  <h6>You can view/add defintions by clicking on the words below</h6>
+  <% @list.each do |word| %>
+    <h3><a href="/<%= word.name %>"><%= word.name %></a></h3>
+  <% end %>
+</div>
