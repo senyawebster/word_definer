@@ -12,14 +12,16 @@ class Word
   def self.all()
     @@list
   end
-  
+
+  def save
+    @@list.push(self)
+  end
+
   def self.clear()
     @@list = []
   end
 
-  # def save
-  #   @@list.push(self)
-  # end
+
   #
   # def self.search(id)
   #   search_id = id.to_i

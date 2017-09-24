@@ -27,8 +27,11 @@ describe('Word') do
     end
   end
 
-  # describe('#save') do
-  #   it("saves a user-inputted word and definition and adds it to @@list to be displayed") do
-  #   end
-  # end
+  describe('#save') do
+    it("saves a word's item(name) & definition") do
+      test_word = Word.new('Toad', 'A small brown creature')
+      test_word.save()
+      expect(Word.all).to eq([test_word])
+    end
+  end
 end
