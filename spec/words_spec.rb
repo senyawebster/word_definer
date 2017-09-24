@@ -34,4 +34,14 @@ describe('Word') do
       expect(Word.all).to eq([test_word])
     end
   end
+
+  describe('.clear') do
+    it("clears @@list") do
+      test_word = Word.new('Toad', 'A small brown creature')
+      test_word.save()
+      Word.clear()
+      expect(Word.all).to eq([])
+    end
+  end
+
 end
