@@ -2,7 +2,7 @@ require('rspec')
 require('word')
 require('pry')
 
-describe(Word) do
+describe('Word') do
   before() do
     Word.clear()
   end
@@ -14,12 +14,12 @@ describe(Word) do
     end
   end
 
-  # descibe('definition') do
-  #   it('returns the definition of an inputted word') do
-  #     test_word = Word.new({:item => 'Frog', :definition => 'A small green creature'})
-  #     expect(test_word.item).to eq 'A small green creature'
-  #   end
-  # end
+  describe('#definition') do
+    it('returns the definition of an inputted word') do
+      test_word = Word.new('Frog', 'A small green creature')
+      expect(test_word.definition).to eq 'A small green creature'
+    end
+  end
 
   # describe('.all') do
   #   it('starts out empty') do

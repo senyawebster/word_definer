@@ -12,7 +12,7 @@ class Word
   def self.all()
     @@list
   end
-
+  
   def self.clear()
     @@list = []
   end
