@@ -5,7 +5,7 @@ class Word
 
   def initialize(item, definition)
     @item = item
-    @definition = definition
+    @definition = [definition]
     @id = @@list.length + 1
   end
 
@@ -21,6 +21,13 @@ class Word
     @@list = []
   end
 
+  def add_definition(new_definition)
+    @definition.push(new_definition)
+  end
+
+  # def self.list()
+  #   @definition
+  # end
 
   #
   # def self.search(id)
