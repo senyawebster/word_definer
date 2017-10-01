@@ -18,6 +18,6 @@
   <h3>Your Dictionary</h3>
   <h6>You can view/add defintions by clicking on the words below</h6>
   <% @list.each do |word| %>
-    <h3><a href="/<%= word.name %>"><%= word.name %></a></h3>
+    <h3><a href="/word/<%= word.id %>"><%= word.name %></a></h3>
   <% end %>
 </div>

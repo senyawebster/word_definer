@@ -3,8 +3,20 @@
   <h2><%= @word.name %></h2>
 </div>
 
-<h2><b><%= @word %></b></h2>
-<h6><%= @definition %></h6>
+<!-- <h2><b><%= @word.name %></b></h2> -->
 
+<form action="/word/<%= @word.id %>" method="post">
+  <div class="form-group">
+    <label for="definition">Add a definiton:</label>
+    <input class="form-control" type="text" name="definition">
+  </div>
+  <button type="submit" class="btn btn-info">Add</button>
+</form>
 
+<br>
+<% @word.definition.each do |x| %>
+  <h6><%= x %></h6>
+<% end %>
+
+<br>
 <a href='/'>Return to Homepage</a>

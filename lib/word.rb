@@ -21,8 +21,17 @@ class Word
     @@list = []
   end
 
-  def add_definition(new_definition)
-    @definition.push(new_definition)
+  def add_definition(definition)
+    @definition.push(definition)
+  end
+
+  def self.find(id)
+    word_id = id.to_i()
+    @@list.each do |x|
+      if x.id == word_id
+        return x
+      end
+    end
   end
 
   # def self.list()
