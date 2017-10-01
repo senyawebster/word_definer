@@ -53,4 +53,15 @@ describe('Word') do
     end
   end
 
+  describe('.find') do
+    it('finds a word by ID') do
+      word1 = Word.new('Tiger', 'A big orange creature')
+      word1.save()
+      word2 = Word.new('Whale', 'A huge blue creature')
+      word2.save()
+      expect(Word.find(1)).to eq(word1)
+      expect(Word.find(2)).to eq(word2)
+    end
+  end
+
 end
