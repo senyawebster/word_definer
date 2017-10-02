@@ -8,7 +8,7 @@
 A single Word class handles all of the form inputs using a variety of custom methods, Sinatra handles the page routing, all deployed through Heroku.
 
 #### To Run
-* Open `https:// `.
+* Open `https://calm-plateau-56553.herokuapp.com/`.
 
 #### To Test Locally
 * `git clone https://github.com/senyawebster/word_definer.git` into your desired directory.
